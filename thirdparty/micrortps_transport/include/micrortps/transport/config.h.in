@@ -1,0 +1,50 @@
+//    Copyright 2018 Proyectos y Sistemas de Mantenimiento SL (eProsima).
+//
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//
+//        http://www.apache.org/licenses/LICENSE-2.0
+//
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+
+#ifndef _MICRORTPS_TRANSPORT_CONFIG_H_
+#define _MICRORTPS_TRANSPORT_CONFIG_H_
+
+/// VERSION
+
+#ifndef MICRORTPS_TRANSPORT_VERSION_MAJOR
+#define MICRORTPS_TRANSPORT_MAJOR @PROJECT_VERSION_MAJOR@
+#endif
+#ifndef MICRORTPS_TRANSPORT_MINOR
+#define MICRORTPS_TRANSPORT_MINOR @PROJECT_VERSION_MINOR@
+#endif
+#ifndef MICRORTPS_TRANSPORT_MICRO
+#define MICRORTPS_TRANSPORT_MICRO @PROJECT_VERSION_PATCH@
+#endif
+#ifndef MICRORTPS_TRANSPORT_STR
+#define MICRORTPS_TRANSPORT_STR "@PROJECT_VERSION@"
+#endif
+
+/// SIZES
+/// Values from cmake/defines/compiling_time_defines.cmake
+
+#ifndef CONFIG_MAX_TRANSMISSION_UNIT_SIZE
+#define CONFIG_MAX_TRANSMISSION_UNIT_SIZE @_CONFIG_MAX_TRANSMISSION_UNIT_SIZE_@
+#endif // !CONFIG_MAX_TRANSMISSION_UNIT_SIZE
+
+
+#ifndef CONFIG_MAX_NUM_LOCATORS
+#define CONFIG_MAX_NUM_LOCATORS @_CONFIG_MAX_NUM_LOCATORS_@
+#endif // !CONFIG_MAX_NUM_LOCATORS
+
+
+#ifndef CONFIG_MAX_STRING_SIZE
+#define CONFIG_MAX_STRING_SIZE @_CONFIG_MAX_STRING_SIZE_@
+#endif // !CONFIG_MAX_STRING_SIZE
+
+#endif // _MICRORTPS_TRANSPORT_CONFIG_H_
